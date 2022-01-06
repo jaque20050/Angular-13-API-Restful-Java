@@ -3,6 +3,8 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { MatSnackBar } from '@angular/material/snack-bar';
 
+import { Login } from '../../models';
+
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -36,6 +38,7 @@ export class LoginComponent implements OnInit {
         "Dados inválidos", "Erro", { duration: 5000 });
       return;
     }// Caso seja valido, ira exibir um alert dos dados.
-    alert(JSON.stringify(this.form.value));
+    const login: Login = this.form.value;
+    alert('Email: ' + login.email + ', Senha: ' + login.senha);
   }
 }
