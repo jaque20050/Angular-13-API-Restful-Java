@@ -12,7 +12,7 @@ export const LoginRoutes: Routes = [
 ];
 
 @NgModule({
-    imports: [RouterModule.forRoot(LoginRoutes)],
+    imports: [RouterModule.forChild(LoginRoutes)],
     exports: [RouterModule]
 })
 
